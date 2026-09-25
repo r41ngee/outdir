@@ -3,6 +3,7 @@ name = "outdir"
 version = "0.1.0"
 rust-version = "1.32.0"
 edition = "2018"
+license = "MIT"
 
 repository = "https://github.com/r41ngee/outdir"
 description = "simple marcos to include files from $OUT_DIR"
