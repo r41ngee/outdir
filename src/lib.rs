@@ -5,7 +5,6 @@ pub mod build_macros;
 macro_rules! outdir {
     ($x: literal) => {
         include!($crate::path!($x));
-        compile_error!();
     };
 }
 
