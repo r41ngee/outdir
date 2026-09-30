@@ -1,14 +1,10 @@
 #[macro_export]
 macro_rules! write {
     ($path: literal, $content: expr) => {{
-        fn __write_inner() -> Result<(), std::io::Error> {
-            use std::io::Write;
-            use std::fs::File;
-            let mut __file = File::create($crate::build_path!($path))?;
-            __file.write_all($content)
-        }
-
-        __write_inner()
+        use std::io::Write;
+        use std::fs::File;
+        let mut __file = File::create($crate::build_path!($path)).unwrap();
+        __file.write_all($content).unwrap()
     }};
 }
 
