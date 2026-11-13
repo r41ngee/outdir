@@ -1,5 +1,6 @@
 #![doc = include_str!("../README.md")]
-pub mod build_macros;
+mod build_macros;
+
 
 #[macro_export]
 macro_rules! outdir {
